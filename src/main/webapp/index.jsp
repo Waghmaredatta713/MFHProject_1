@@ -1,286 +1,200 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>DevOps Job Application</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <style>
-      html, body {
-      min-height: 90%;
-      }
-     <!-- commemt -->
-      body, div, form, input, select, p {
-      padding: 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DattaGanesh IT Solution</title>
+  <style>
+    body {
       margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 60px;
-      color: #012;
-      line-height: 40px;
-      }
-      h1 {
-      position: absolute;
-      margin: 0;
-      font-size: 50px;
-      color: #000;
-      z-index: 2;
-      }
-      p.top-info {
-      margin: 10px 0;
-      }
-      .testbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: inherit;
-      padding: 20px;
-      }
-      form {
-      width: 200%;
-      padding: 20px;
-      border-radius: 6px;
-      background: #FFF;
-      box-shadow: 0 0 25px 0 #000;
-      }
-     .banner {
-      position: relative;
-      height: 50px;
-      background-image: url("/uploads/media/default/0001/02/fb57ab781c34da322c884532bfec751e843e36fc.jpeg");
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background: #004aad;
+      color: white;
+      padding: 1rem 2rem;
       text-align: center;
-      }
-      .banner::after {
-      content: "";
-      background-color: purple;
-      position: absolute;
-      width: 100%;
-      height: 180%;
-      }
-      input, select, textarea {
-      margin-bottom: 10px;
-      border: 1px solid #EEE;
-      border-radius: 3px;
-      }
-      input {
-      width: calc(100% - 10px);
-      padding: 5px;
-      }
-      input[type="date"] {
-      padding: 4px 5px;
-      }
-      select {
-      width: 100%;
-      padding: 7px 0;
-      background: transparent;
-      }
-      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
-      color: #1c87c9;
-      }
-      .item input:hover, .item select:hover {
-      border: 1px solid transparent;
-      box-shadow: 0 0 6px 0 #1c87c9;
-      color: #1c87c9;
-      }
-      .item {
-      position: relative;
-      margin: 10px 0;
-      }
-      input[type="date"]::-webkit-inner-spin-button {
-      display: none;
-      }
-      .item i, input[type="date"]::-webkit-calendar-picker-indicator {
-      position: absolute;
-      font-size: 40px;
-      color: #a9a9a9;
-      }
-      .item i {
-      right: 2%;
-      top: 30px;
-      z-index: 1;
-      }
-      [type="date"]::-webkit-calendar-picker-indicator {
-      right: 1%;
-      z-index: 2;
-      opacity: 0;
-      cursor: pointer;
-      }
-      input[type=radio]  {
-      display: none;
-      }
-      label.radio {
-      position: relative;
-      display: inline-block;
-      margin: 5px 20px 10px 0;
-      cursor: pointer;
-      }
-      .question span {
-      margin-left: 30px;
-      }
-      span.required {
-      margin-left: 0;
-      color: #FAEBE7;
-      }
-      label.radio:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 17px;
-      height: 17px;
-      border-radius: 50%;
-      border: 2px solid #ccc;
-      }
-      input[type=radio]:checked + label:before, label.radio:hover:before {
-      border: 2px solid #1c87c9;
-      }
-      label.radio:after {
-      content: "";
-      position: absolute;
-      top: 6px;
-      left: 5px;
-      width: 8px;
-      height: 4px;
-      border: 3px solid #1c87c9;
-      border-top: none;
-      border-right: none;
-      transform: rotate(-45deg);
-      opacity: 0;
-      }
-      input[type=radio]:checked + label:after {
-      opacity: 1;
-      }
-      .btn-block {
-      margin-top: 10px;
+    }
+
+    nav {
+      background: #002f6c;
       text-align: center;
-      }
-      button {
-      width: auto;
-      padding: 10px;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #004aad;
+    }
+
+    .courses-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .course-item {
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .why-choose {
+      background: #e9ecef;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background: #004aad;
+      color: white;
+      padding: 0.8rem 2rem;
       border: none;
       border-radius: 5px;
-      background: #000;
-      font-size: 20px;
-      font-weight: 900;
-      color: #FAEBE7;
       cursor: pointer;
-      }
-      button:hover {
-      background: #1e6fa0;
-      }
-      @media (min-width: 568px) {
-      .name-item, .contact-item, .position-item {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      }
-      .name-item input {
-      width: calc(50% - 20px);
-      }
-      .contact-item .item, .position-item .item {
-      width: calc(50% - 8px);
-      }
-      .contact-item input, .position-item input {
-      width: calc(100% - 12px);
-      }
-      .position-item select {
-      width: 100%;
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="testbox">
-      <form action="/">
-        <div class="banner">
-          <h1>DevOps Job Application Form</h1>
-        </div>
-        <div align="left">
- 
-        <p class="top-info"><b>Thank you for your interest in working with us. <br/> Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</b></p>
-        </div>
-        
-<div align="left">
+    }
 
-  <p> We will get back to you shortly</p></div>
-        <div class="item">
-          <p>Name<span class="required">*</span></p>
-          <div class="name-item">
-            <input type="text" name="name" placeholder="First" required/>
-            <input type="text" name="name" placeholder="Last" required/>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="item">
-            <p>Email<span class="required">*</span></p>
-            <input type="text" name="name" required/>
-          </div>
-          <div class="item">
-            <p>Phone<span class="required">*</span></p>
-            <input type="text" name="name" required/>
-          </div>
-        </div>
-        <div class="position-item">
-          <div class="item">
-            <p>What position are you applying for?<span class="required">*</span></p>
-            <select required>
-              <option value="1">Job 1</option>
-              <option value="2">Job 2</option>
-              <option value="3">Job 3</option>
-              <option value="4">Job 4</option>
-              <option value="5">Job 5</option>
-            </select>
-          </div>
-          <div class="item">
-            <p>Available start date<span class="required">*</span></p>
-            <input type="date" name="bdate" required/>
-            <i class="fas fa-calendar-alt"></i>
-          </div>
-        </div>
-        <div class="question">
-          <p>What is your current employment status?<span class="required">*</span></p>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_1" name="status" required/>
-              <label for="radio_1" class="radio"><span>Employed</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_2" name="status" required/>
-              <label for="radio_2" class="radio"><span>Self-Employed</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_3" name="status" required/>
-              <label for="radio_3" class="radio"><span>Unemployed</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_4" name="status" required/>
-              <label for="radio_4" class="radio"><span>Student</span></label>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <p>Submit your resume by providing your resume URL or attach file:</p>
-          <input type="text" name="providing"/>
-  <input type="file" name="file" accept="file/*">
-        </div>
-        <div class="question">
-          <p>Would you like to list references</p>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_5" name="references" />
-              <label for="radio_5" class="radio"><span>Yes</span></label>
-            </div>
-            <div>
-              <input type="radio" value="none" id="radio_6" name="references" />
-              <label for="radio_6" class="radio"><span>No</span></label>
-            </div>
-          </div>
-        </div>
-        <div class="btn-block">
-          <button type="submit" href="/">Apply For The Job</button>
-        </div>
+    .contact-form button:hover {
+      background: #00337f;
+    }
+
+    footer {
+      background: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DattaGanesh IT Solution</h1>
+    <p>Your Gateway to a Successful IT Career</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>DattaGanesh IT Solution is a leading software training institute offering world-class training in DevOps, Cloud Computing, Data Analytics, and Cyber Security. Our mission is to bridge the gap between education and industry by delivering practical, hands-on learning experiences designed by real-world professionals.</p>
+  </section>
+
+  <section id="courses">
+    <h2>Our Courses</h2>
+    <div class="courses-list">
+      <div class="course-item"><strong>DevOps</strong><br>CI/CD, Jenkins, Docker, Kubernetes, GitOps</div>
+      <div class="course-item"><strong>AWS</strong><br>Solutions Architect, Lambda, EC2, S3, CloudFormation</div>
+      <div class="course-item"><strong>Azure</strong><br>Azure DevOps, App Services, ARM Templates</div>
+      <div class="course-item"><strong>GCP</strong><br>Compute Engine, BigQuery, IAM, Cloud Functions</div>
+      <div class="course-item"><strong>Data Analytics</strong><br>Power BI, Tableau, Excel, SQL, Python</div>
+      <div class="course-item"><strong>Data Science</strong><br>Machine Learning, Python, Pandas, Scikit-learn</div>
+      <div class="course-item"><strong>Data Engineering</strong><br>ETL, Apache Spark, Kafka, Airflow</div>
+      <div class="course-item"><strong>Cyber Security</strong><br>Ethical Hacking, Network Security, SIEM, SOC</div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why Choose DattaGanesh IT Solution?</h2>
+    <div class="why-choose">
+      <ul>
+        <li>✅ Experienced Industry Trainers</li>
+        <li>✅ 100% Practical and Real-Time Projects</li>
+        <li>✅ Resume Preparation & Job Assistance</li>
+        <li>✅ Online & Offline Training Modes</li>
+        <li>✅ Weekday and Weekend Batches</li>
+        <li>✅ Certification Guidance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form onsubmit="return validateForm()">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
     </div>
-  </body>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DattaGanesh IT Solution. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return false;
+      }
+      
+      alert("Thank you for contacting us! We'll get back to you soon.");
+      return false; // prevent actual submission (for demo only)
+    }
+  </script>
+
+</body>
 </html>
